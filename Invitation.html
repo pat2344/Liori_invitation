@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christening Invitation</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom, #a7c7e7, #d0b8a3);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        h1 {
+            animation: fadeIn 2s ease-in-out;
+            color: #d85a6b; /* Bold color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-size: 2.5em;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .invitation {
+            animation: slideIn 2s ease-in-out;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 500px;
+            width: 90%; /* Ensures responsiveness */
+            background: linear-gradient(to bottom, #f0e2b6, #f5e4c9);
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border: 4px dotted #88b7d5;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        video {
+            width: 100%;
+            max-height: 200px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            animation: zoomIn 2s ease-in-out;
+            border: 4px solid #88b7d5;
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        p {
+            color: #888;
+            font-size: 1.1em;
+            line-height: 1.6;
+            font-weight: bold;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background: linear-gradient(to bottom, #d1b68c, #c1a35f);
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .button:hover {
+            background: linear-gradient(to bottom, #c1a35f, #d1b68c);
+            cursor: pointer;
+        }
+        .balloons {
+            position: absolute;
+            bottom: 10px;
+            animation: floatUp 6s ease-in-out infinite;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .balloon {
+            width: 40px;
+            height: 60px;
+            background: linear-gradient(to bottom, #8bc9f1, #bfd8e4);
+            border-radius: 50%;
+            position: relative;
+            margin: 0 8px;
+        }
+        .balloon:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background: #000;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0); }
+        }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em; /* Adjust title size */
+            }
+            .invitation {
+                padding: 15px;
+                max-width: 95%;
+            }
+            video {
+                max-height: 180px;
+            }
+            p {
+                font-size: 1em; /* Slightly reduce text size */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>You're Invited to a Special Christening Celebration!</h1>
+
+    <div class="invitation">
+        <video autoplay muted loop>
+            <source src="C:\PerfLogs\lio.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div>
+            <p>We are overjoyed to invite you to the christening of our little star,</p>
+            <p><strong>Liori D. Garcia</strong>.</p>
+            <p><strong>Date:</strong> January 26, 2024</p>
+            <p><strong>Time:</strong> 10:00 AM</p>
+            <p><strong>Location:</strong> 8460 Purok Laloma, North Caloocan City</p>
+        </div>
+
+        <p>We can’t wait to share this joyous moment with you!</p>
+
+        <div>
+            <p><strong>RSVP by:</strong> January 15, 2024</p>
+            <p><strong>Contact us:</strong> +639123456789</p>
+        </div>
+
+        <a href="#" class="button">See You There 😊</a>
+    </div>
+
+    <div class="balloons">
+        <div class="balloon" style="background: linear-gradient(to bottom, #88b7d5, #afd2e2);"></div>
+        <div class="balloon" style="background: linear-gradient(to bottom, #d1b68c, #c1a35f);"></div>
+        <div class="balloon" style="background: linear-gradient(to bottom, #c1a35f, #d1b68c);"></div>
+    </div>
+</body>
+</html>
